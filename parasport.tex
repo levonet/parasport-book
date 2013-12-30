@@ -1,0 +1,50 @@
+\documentclass[10pt,a4paper,russian,openany]{book}
+\usepackage[T2A]{fontenc}
+\usepackage[koi8-r]{inputenc}
+\usepackage[russian]{babel}
+
+\ifx\pdfoutput\undefined
+\usepackage[dvips]{graphicx}
+\else
+\usepackage{pslatex,pscyr}
+\usepackage[pdftex]{graphicx}
+\pdfinfo
+  { /Title (Training of sportsman - skydivers)
+    /Author (Pavel Bashinsky <faust@yalta.net.ua>)
+    /Subject (Training of sportsman - skydivers. Guskov A.S.)
+    /Keywords (sport,skydive,skydive in USSR,history,D-1-5-Y,D-1-5-U,YT-15,UT-15)
+}
+\fi
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage\bfseries}
+\fancyhead[LO]{\it\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancypagestyle{plain}{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\idx}[1]{\mbox{\scriptsize #1}}
+
+\topmargin=5pt
+\textheight=620pt
+
+\begin{document}
+\include{header}
+\include{intro}
+\pagenumbering{arabic}
+\include{ch1}
+\include{ch2}
+\include{ch3}
+\include{ch4}
+\include{ch5}
+\include{ch6}
+\include{appendix}
+
+\tableofcontents
+
+\end{document}
